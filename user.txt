@@ -1,0 +1,2 @@
+usernamne: admin
+pasword: ibanezrg350mzye
