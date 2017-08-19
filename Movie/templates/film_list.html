@@ -2,10 +2,10 @@
 	<head>
 	<title>Film</title>
 	</head>
-        <div class="film">
+        <div>
 		{% for film in film %} 
             <p>published: {{ film.Year }}</p>
-            <h1>Title : <a href="\film\{{ Movie.id }}">{{ film.Title }}</a></h1>
+            <h1>Title : <a href="{% url 'film_detail' pk=film.pk %}">{{ film.Title }}</a></h1>
             <p>Description : {{ film.Description|linebreaksbr }}</p>
             {% for actor in film.actor.all %} 
                 <p>Actor : {{ actor.Actor_name }} </p>
@@ -14,7 +14,6 @@
                 <p>Genre : {{ genre.Type }}</p> 
             {% endfor %}
 		{% endfor %}
-		
 		</div>
 	</body>
 </html>
